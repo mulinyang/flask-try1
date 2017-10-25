@@ -20,8 +20,8 @@ class TestDevelopmentConfig(TestCase):
         self.assertTrue(app.config['SECRET_KEY'] == 'my_precious')
         self.assertTrue(app.config['DEBUG'] is True)
         self.assertFalse(current_app is None)
-        
-        
+
+
 class TestTestingConfig(TestCase):
     def create_app(self):
         app.config.from_object('project.config.TestingConfig')
