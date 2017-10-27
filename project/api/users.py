@@ -1,4 +1,4 @@
-# project/api/views.py
+# project/api/users.py
 
 from flask import Blueprint, jsonify, request
 
@@ -39,7 +39,7 @@ def add_user():
             db.session.commit()
             response_object = {
                 'status': 'success',
-                'message': f'{email} was added!'
+                'message': f'{email} was added!',
             }
             return jsonify(response_object), 201
         else:
@@ -107,3 +107,6 @@ def get_all_users():
         }
     }
     return jsonify(response_object), 200
+
+
+

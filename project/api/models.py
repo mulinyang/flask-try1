@@ -7,7 +7,6 @@ import jwt
 from project import db, bcrypt
 from flask import current_app
 
-
 class User(db.Model):
     __tablename__ = "users"
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
